@@ -1,0 +1,11 @@
+@page
+@model brianwrightSite.Pages.AboutModel
+@{
+    ViewData["Title"] = "About";
+}
+
+<h1>About</h1>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
