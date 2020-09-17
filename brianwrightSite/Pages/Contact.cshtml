@@ -3,8 +3,43 @@
 @{
     ViewData["Title"] = "Contact";
 }
+<h1 class="display-4 mb-4">
+    contact me 
+</h1>
 
-<h1>Contact</h1>
+    <div class="card shadow p-3 mb-3 bg-white">
+    <div class="media p-3 mb-3">
+        <a href="mailto:briankw23@gmail.com?subject=Hi Brian">
+            <img class="align-self-start mr-4 img-fluid" style="height: 70px;" src="https://www.flaticon.com/svg/static/icons/svg/2590/2590807.svg" alt="Generic placeholder image">
+        </a>
+        <div class="media-body">
+            <h4 class="mt-0">email      <small class="text-muted">briankw23@gmail.com</small></h4>                 
+            <a href="mailto:briankw23@gmail.com?subject=Hi Brian" class="badge badge-secondary">email me</a>
+        </div>
+    </div>
+
+    <div class="media p-3 mb-3 bg-white">
+        <a href="https://www.linkedin.com/in/brianwrightnash/">
+            <img class="align-self-start mr-4 img-fluid" style="height: 70px;" src="https://www.flaticon.com/svg/static/icons/svg/408/408703.svg" alt="Generic placeholder image">
+        </a>
+        <div class="media-body">
+            <h4 class="mt-0">linkedin      <small class="text-muted">visit my page</small></h4>                 
+            <a href="https://www.linkedin.com/in/brianwrightnash/" class="badge badge-secondary">let's connect</a>
+        </div>
+    </div>
+
+    <div class="media p-3 mb-3 bg-white">
+        <a href="https://github.com/briankw23">
+            <img class="align-self-start mr-4 img-fluid" style="height: 70px;" src="https://www.flaticon.com/svg/static/icons/svg/779/779088.svg" alt="Generic placeholder image">  
+        </a>
+        <div class="media-body">
+            <h4 class="mt-0">github      <small class="text-muted">view my repos</small></h4>                 
+            <a href="https://github.com/briankw23" class="badge badge-secondary">check out</a>
+        </div>
+    </div>
+    </div>
+
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

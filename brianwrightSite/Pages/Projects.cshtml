@@ -4,7 +4,16 @@
     ViewData["Title"] = "Projects";
 }
 
-<h1>Projects</h1>
+<h1>projects</h1>
+
+    <div class="media shadow p-3 mb-5 bg-white">
+        <img class="align-self-start mr-4 img-fluid" style="height: 50px;" src="https://www.flaticon.com/svg/static/icons/svg/921/921564.svg" alt="Generic placeholder image">
+        <div class="media-body">
+            <h5 class="mt-0">bug tracker      <small class="text-muted">collection of bugs</small></h5>           
+            <p> nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>       
+            <a class="badge badge-secondary" href="www.bugstack.com">www.bugstack.com</a>
+        </div>
+    </div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

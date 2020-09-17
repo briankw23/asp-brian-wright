@@ -38,5 +38,17 @@ namespace brianwrightSite.Pages
             return result;
             
         }
+
+        public List<Education> GetAllEducationItems()
+        {
+            using IDbConnection connection = new SQLiteConnection(connectionString);
+
+            connection.Open();
+
+            List<Education> result = connection.Query<Education>(@"Select * from Education").ToList();
+
+            return result;
+
+        }
     }
 }

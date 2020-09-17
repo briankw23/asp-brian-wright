@@ -20,5 +20,9 @@ namespace brianwrightSite.Models
 
         public DateTime EndTime { get; set; }
 
+        public string Image { get; set; }
+
+        public string Url { get; set; }
+
     }
 }
