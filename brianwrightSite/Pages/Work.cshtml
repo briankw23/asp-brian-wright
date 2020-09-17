@@ -2,19 +2,41 @@
 @model brianwrightSite.Pages.WorkModel
 @{ ViewData["Title"] = "Work"; }
 
-        @foreach (var item in Model.GetAllResumeItems())
-        {
-        <div class="media m-4">
-            <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder1.jpg" alt="Generic placeholder image">
-            <div class="media-body">
-                <h5 class="mt-0 font-weight-bold">@item.Role</h5>
+<h1 class="display-4 mb-4">work experience</h1>
 
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-                vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
-                congue felis in faucibus.
-            </div>
+@foreach (var item in Model.GetAllResumeItems())
+{
+    <div class="media shadow p-3 mb-5 bg-white">
+        <img class="align-self-start mr-4 img-fluid" style="height: 50px;" src=@item.Image alt="Generic placeholder image">
+        <div class="media-body">
+            <h5 class="mt-0">@item.Role.ToLower()       <small class="text-muted">@item.Company</small></h5>           
+            <p> nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>       
+            <a class="badge badge-secondary" href=@item.Url>@item.Url</a>
         </div>
-        }
+    </div>
+}
+
+<h1 class="display-4 mb-4">education</h1>
+
+@foreach (var item in Model.GetAllEducationItems())
+{
+    <div class="media shadow p-3 mb-5 bg-white">
+        <img class="align-self-start mr-4 img-fluid" style="height: 50px;" src=@item.Image alt="Generic placeholder image">
+        <div class="media-body">
+            <h5 class="mt-0">@item.School.ToLower()     <small class="text-muted">@item.DateCompleted.ToString("MMMM-yyyy")</small></h5>
+            <h6 class="mt-0">@item.DegreeCompleted</h6>
+            <a class="badge badge-secondary" href=@item.Url>@item.Url</a>
+        </div>
+    </div>
+}
+
+<div class="media shadow p-3 mb-5 bg-white">
+    <img class="align-self-start mr-4 img-fluid" style="height: 50px;" src="https://www.flaticon.com/svg/static/icons/svg/3050/3050500.svg" alt="Generic placeholder image">
+    <div class="media-body">
+        <h5 class="mt-0">resume         <small class="text-muted">Brian Wright CV</small></h5>
+        <h6 class="mt-0"><a href="https://drive.google.com/file/d/1MlBkehGC9XIu3clC2DMihqW1hSXm5yOg/view?usp=sharing" class="badge badge-secondary">Download Resume</a></h6>
+    </div>
+</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
